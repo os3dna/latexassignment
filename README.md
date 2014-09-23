@@ -1,2 +1,1 @@
-# Assignment
-
+# Latex Assignment
