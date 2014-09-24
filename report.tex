@@ -75,6 +75,8 @@ showstringspaces=false}
 
 \listoffigures
 
+\listoftables
+
 \chapter* {Introduction}
 \addcontentsline{toc}{chapter}{Introduction}
 
@@ -127,7 +129,8 @@ http://www.w3schools.com/webservices/ws_rdf_example.asp}}
  \paragraph{}
 Here are two records from a CD-list:
  
-\begin{center} 
+\begin{table}[h]
+\centering
 \begin{tabular}{ | l | c | c | c | c | c |}
  \hline
  Title & Artist & Country & Company & Price & Year \\ \hline
@@ -136,10 +139,11 @@ Here are two records from a CD-list:
   Hide your heart & Bonnie Tyler & UK &	CBS Records &9.90 &	1988 \\
  \hline
 \end{tabular}
-\end{center}
+\caption[A list of Albums]{A list of Albums}
+\end{table}
 
 \paragraph{}
-Below is a few lines from an RDF document:
+Below a few lines from an RDF document:
 
 \begin{lstlisting}[language=XML]
 <?xml version="1.0"?>
@@ -201,13 +205,13 @@ Resource information :
 
 \chapter{XQuery}
 
-\section{Definiton}
-
 \begin{figure}[h]
 	\centering
 		\includegraphics{images/xquery_image.jpeg}~\\[1cm]
-		\caption {Example of triple \url {http://computer.howstuffworks.com/semantic-web3.htm}}
+		\caption {XQuery}
 \end{figure}
+
+\section{Definiton}
 
 
 \paragraph{}
@@ -234,7 +238,8 @@ relational databases.\\
 \paragraph{}
 This presentation was a \emph{collaboration} between these groups: \\
  
-\begin{center}
+\begin{table}
+\centering
  \begin{tabular}{| l | c | c | c |}
  \hline \textbf{Group} & \textbf{Student} & \textbf{Link} \\
  \hline 
@@ -245,7 +250,8 @@ This presentation was a \emph{collaboration} between these groups: \\
  6 & Rophrimardho & \href{https://www.os3.nl/2014-2015/students/rohprimardho/es/homework_1.3}{Wiki} \\ 
  \hline 
  \end{tabular} 
-\end{center}
+ \caption[Collaboration Table]{Collaboration Table}
+\end{table}
  
 \paragraph{References\\}
 1)http://en.wikipedia.org/wiki/XQuery \\
@@ -286,7 +292,8 @@ It walks through the input string attempting all permutations of the regular exp
 \paragraph{}
 This presentation was a \emph{collaboration} between these groups: \\
 
-\begin{center}
+\begin{table}
+\centering
  \begin{tabular}{| l | c | c | c |}
  \hline \textbf{Group} & \textbf{Student} & \textbf{Link} \\
  \hline 
@@ -297,7 +304,8 @@ This presentation was a \emph{collaboration} between these groups: \\
  6 & Carlo Rengo & \href{https://www.os3.nl/2014-2015/students/carlo_rengo/es/homewrk_3}{Wiki} \\ 
  \hline 
  \end{tabular} 
-\end{center}
+ \caption[Collaboration Table]{Collaboration Table}
+\end{table}
 
 
 \paragraph{References\\}
@@ -313,6 +321,28 @@ This presentation was a \emph{collaboration} between these groups: \\
 		\caption{Scons Build Tool}
 \end{figure}
 
+\section{What is SCons}
+
+\paragraph{}
+
+SCons is an open source software construction tool written in Python. It defines itself as a next-generation build tool and it is intended as a replacement of tools such as CMake and GNU autotools. 
+
+\section{Why is SCons used}
+
+\paragraph{}
+
+SCons prides it self in being an advancement of the previous build systems. Some of the points that make it stand out are discussed in brief below:
+
+\begin{description}
+\item[Clear and easy syntax:] SCons scripts are written in python. However it is very easy to use its most basic functions (such as building a simple target) by writing one line of code. That makes the tool very easy to learn.
+\item[Reliable dependency resolution:] SCons checks for dependencies when it's invoked even if the dependencies are not explicitly stated. 
+\item[Cross Platform:] SCons can be easily used in any UNIX-like system but can be used out of the box in Windows systems as well. 
+\item[Autotools Integration:] SCons has its own set of tools that provide the same functionality as Autotools
+\item[Python Powered:] As mentioned before SCons scripts are Python scripts. That means that the user can exploit the full functionality of a much popular programming language to perform all sorts of tasks during build. 
+\item[Straightforward extensibility:] Since it uses Python everywhere anyone can extend SCons to be used on other programming languages and platforms.
+\item[Improved parallel builds:] SCons can make much better use of a systems multithreading and multicore capabilities in order to build software faster.
+\item[Repository Integration:] SCons can be easily used with any version control systems in order to build software residing in remote repositories. 
+\end{description}
 
 
 
