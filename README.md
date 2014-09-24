@@ -8,7 +8,11 @@
 2. Cd to the directory:
 
         cd latexassignment	
-3. Run make:
+3. Run make clean:
 
-        make
-4. Enjoy our pdf
+        make clean
+4. Run make:
+        
+		make
+
+5. Enjoy our pdf
