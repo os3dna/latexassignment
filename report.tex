@@ -123,9 +123,7 @@ XML-based RDF allows a common way to describe and share information between diff
 
 \subsection{RDF Example}
 \paragraph{}
-The following example will give a more idea on how RDF works.\footnote{\url{
-http://www.w3schools.com/webservices/ws_rdf_example.asp}}
- 
+The following example will give a more idea on how RDF works. \cite{w3schools}
  \paragraph{}
 Here are two records from a CD-list:
  
@@ -186,22 +184,9 @@ The \textless rdf:Description\textgreater element contains the description of th
 
 The elements: \textbf{\textless cd:artist\textgreater}, \textbf{\textless cd:country\textgreater}, \textbf{\textless cd:company}\textgreater, etc. are properties of the resource.
 
-
-
-
-
 \section{References}
 \paragraph{}
-Slide presentation for this topic can be found on the following link : \url{https://docs.google.com/file/d/0BzZaPwl3dLnFeW0tZGV5bHdRNUU/edit?usp=docslist_api}
-
-\paragraph{}
-Resource information : 
-
-\url{http://www.w3.org/DesignIssues/RDF-XML.html}
-\url{http://www.w3schools.com/webservices/ws_rdf_rules.asp}
-\url{http://en.wikipedia.org/wiki/Resource_Description_Framework}
-\url{http://en.wikipedia.org/wiki/Semantic_Web}
-\url{https://www.youtube.com/watch?v=16q5bbeO3xI}
+Slide presentation for this topic can be found on the following link : \url{https://docs.google.com/file/d/0BzZaPwl3dLnFeW0tZGV5bHdRNUU/edit?usp=docslist_api} \cite{w3crdf,rdfrules,wikirdf,semantic,video1}
 
 \chapter{XQuery}
 
@@ -215,14 +200,13 @@ Resource information :
 
 
 \paragraph{}
-\textbf{Xquery} {\footnotesize (1)} is to XML formatted data what SQL is to
-relational databases.\\
+\textbf{Xquery} is to XML formatted data what SQL is to relational databases. \cite{wikixquery}
 
 \begin{itemize}
-  \item \textbf{Xquery} is a specification from \textit{W3C}, appeared in 2007 and became a \textit{W3C} {\footnotesize (2)} reccomendation.
+  \item \textbf{Xquery} is a specification from \textit{W3C}, appeared in 2007 and became a \textit{W3C} reccomendation. \cite{w3xquery}
   \item Current version 3.0.
   \item It is a language that uses queries to extract data from XML file or XML-like files.
-  \item It contains a superset of Xpath {\footnotesize (3)} expression syntax.
+  \item It contains a superset of Xpath expression syntax. \cite{xpath}
 \end{itemize}
  
  Also, \\
@@ -238,7 +222,7 @@ relational databases.\\
 \paragraph{}
 This presentation was a \emph{collaboration} between these groups: \\
  
-\begin{table}
+\begin{table}[h]
 \centering
  \begin{tabular}{| l | c | c | c |}
  \hline \textbf{Group} & \textbf{Student} & \textbf{Link} \\
@@ -253,10 +237,6 @@ This presentation was a \emph{collaboration} between these groups: \\
  \caption[Collaboration Table]{Collaboration Table}
 \end{table}
  
-\paragraph{References\\}
-1)http://en.wikipedia.org/wiki/XQuery \\
-2)http://www.w3.org/TR/xquery/ \\
-3)http://searchsoa.techtarget.com/definition/XPath \\
 
 
 \chapter{RegEx Text Directed Engine}
@@ -269,12 +249,12 @@ This presentation was a \emph{collaboration} between these groups: \\
 
 \section{Types of Engines}
 \begin{flushleft}
-Two basic engine types reflect a fundamental difference in algorithms available for applying a regular expression to a string. The \textbf{NFA}{\footnotesize (1)} (Non Deterministic Finite Automations) "regex-directed" engines and the \textbf{DFA}{\footnotesize (2)} (Deterministic Finite Automations) "text-directed" engines.
+Two basic engine types reflect a fundamental difference in algorithms available for applying a regular expression to a string. The \textbf{NFA}(Non Deterministic Finite Automations) "regex-directed" engines and the \textbf{DFA} (Deterministic Finite Automations) "text-directed" engines. \cite{NFA,DFA}
 \end{flushleft}
 
 \section{Text-directed Engines}
 \begin{center}
-According to Jeffrey E. F. Friedl’s book {\footnotesize (3)} "Mastering Regular Expressions" a DFA engine, each character scanned from the text controls the engine.
+According to Jeffrey E. F. Friedl’s book "Mastering Regular Expressions" a DFA engine, each character scanned from the text controls the engine. \cite{book}
 \end{center}
 
 \section{How does it Work}
@@ -292,7 +272,7 @@ It walks through the input string attempting all permutations of the regular exp
 \paragraph{}
 This presentation was a \emph{collaboration} between these groups: \\
 
-\begin{table}
+\begin{table}[h]
 \centering
  \begin{tabular}{| l | c | c | c |}
  \hline \textbf{Group} & \textbf{Student} & \textbf{Link} \\
@@ -306,12 +286,6 @@ This presentation was a \emph{collaboration} between these groups: \\
  \end{tabular} 
  \caption[Collaboration Table]{Collaboration Table}
 \end{table}
-
-
-\paragraph{References\\}
-1) \href{http://en.wikipedia.org/wiki/Nondeterministic_finite_automaton}{NFA} \\
-2) \href{http://en.wikipedia.org/wiki/Deterministic_finite_automaton}{DFA} \\
-3) \href{http://dl.e-book-free.com/2013/07/mastering_regular_expressions_third_edition.pdf}{Book} \\
 
 \chapter {Build Tools: Scons}
 
@@ -340,11 +314,99 @@ SCons prides it self in being an advancement of the previous build systems. Some
 \item[Autotools Integration:] SCons has its own set of tools that provide the same functionality as Autotools
 \item[Python Powered:] As mentioned before SCons scripts are Python scripts. That means that the user can exploit the full functionality of a much popular programming language to perform all sorts of tasks during build. 
 \item[Straightforward extensibility:] Since it uses Python everywhere anyone can extend SCons to be used on other programming languages and platforms.
-\item[Improved parallel builds:] SCons can make much better use of a systems multithreading and multicore capabilities in order to build software faster.
+\item[Improved parallel builds:] SCons can make much better use of a systems multithreading and multicore capabilities than it predecessors in order to build software faster.
 \item[Repository Integration:] SCons can be easily used with any version control systems in order to build software residing in remote repositories. 
 \end{description}
 
+\section{How is SCons used}
 
+\paragraph{}
+
+SCons uses a file called an SConstruct which is the equivalent of Makefile. The SConstruct script is actually a Python script. An SConstruct file can be as simple as the following example
+
+\begin{lstlisting}[language=Python]
+
+Program('hello.c')
+
+\end{lstlisting}
+
+That produces the following:
+
+\begin{lstlisting}[language=bash, columns=fullflexible]
+% scons
+scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Building targets ...
+cc -o hello.o -c hello.c
+cc -o hello hello.o
+scons: done building targets.
+\end{lstlisting}
+
+\section{Who uses SCons}
+
+\paragraph{}
+
+
+Several major projects use SCons to build their software. Some of them include:
+
+\begin{itemize}
+\item{Blender}
+\item{Doom 3}
+\item{CSound}
+\item{MongoDB}
+\item{\ldots}
+\end{itemize}
+\newpage
+\section{How does SCons compare}
+
+\paragraph{}
+
+Below you can find a short comparison table between SCons and other popular build tools:
+
+\begin{table}[h]
+\centering
+ \begin{tabular}{| l | p{6 cm} | p{6 cm} |}
+ \hline \textbf{Tool} & \textbf{Better than SCons} & \textbf{Worse than SCons} \\
+ \hline 
+ Make & Maturity and robustness. Quick builds for certain rules. & No default dependency checking. Makefiles incompatibility between versions.\\
+ \hline 
+ GNU Autotools& Is the default build system in most Linux systems. Very powerful functionality. & Steep learning curve. A lot of tools to use that SCons includes in its environment. \\ 
+ \hline 
+ CMake & Speed. Stability. Integration with tools like Xcode. & Uses its own language. Not as extensible\\ 
+ \hline 
+ \end{tabular} 
+ \caption[SCons VS. table]{SCons VS. table}
+\end{table}
+
+\begin{thebibliography}{99}
+
+\bibitem{w3schools}
+W3C Schools RDF,  \url{http://www.w3schools.com/webservices/ws_rdf_example.asp}
+\bibitem{w3crdf}
+W3C RDF, \url{http://www.w3.org/DesignIssues/RDF-XML.html}
+\bibitem{rdfrules}
+RDF Rules, \url{http://www.w3schools.com/webservices/ws_rdf_rules.asp}
+\bibitem{wikirdf}
+Wiki RDF, \url{http://en.wikipedia.org/wiki/Resource_Description_Framework}
+\bibitem{semantic}
+Wiki Semantic Web,\url{http://en.wikipedia.org/wiki/Semantic_Web}
+\bibitem{video1}
+XML video,\url{https://www.youtube.com/watch?v=16q5bbeO3xI}
+\bibitem{wikixquery}
+Wiki XQuery, \url{http://en.wikipedia.org/wiki/XQuery} 
+\bibitem{w3xquery}
+W3C XQuery, \url{http://www.w3.org/TR/xquery}
+\bibitem{xpath}
+XPath, \url{http://searchsoa.techtarget.com/definition/XPath}
+\bibitem{NFA}
+Non-deterministic finite automata, \url{http://en.wikipedia.org/wiki/Nondeterministic_finite_automaton}
+\bibitem{DFA}
+Deterministic finite automata, \url{http://en.wikipedia.org/wiki/Deterministic_finite_automaton}
+\bibitem{book}
+Jeffrey E. F. Friedl (2006), Mastering Regular Expressions, O'Reilly, Third edition, \url{http://dl.e-book-free.com/2013/07/mastering_regular_expressions_third_edition.pdf}
+
+
+\end{thebibliography}
 
 \end{document}
 
