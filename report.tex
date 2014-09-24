@@ -85,38 +85,40 @@ This is our report in latex.
 
 \paragraph{}Semantic Web is a framework for sharing data between applications, enterprises and people, independent of platform and software(W3C).
 
-Semantic refers to meaning. It is "a web of data that can be processed directly and indirectly by machines" - Tim Berners Lee
+Semantic refers to  {\color{red}meaning}. It is "a web of data that can be processed directly and indirectly by machines" - Tim Berners Lee
 
 Extends the internet which comprises web-pages readable only to humans, to websites that use metadata and can be read by machines.
 
 This leads to the creation of "smart" services that can perform tasks for users with better results and help them share and fin info more easier.
 
-Example : A human can utilize the web to search, find, compare and choose the lowest price to a product. Machines cannot since the webpages aren't build to be read b them.
+Example : A human can utilize the web to search, find, compare and choose the lowest price to a product. Machines cannot since the webpages aren't build to be read by them.
 
 Semantic Web is a form of information that can be interpreted by machines so they can accomplish the tedious tasks that contain searching, putting together and editing what's already available online.
+
 \paragraph{}
 
 \begin{center}
 \includegraphics[width=90mm]{images/semantic-web-3.jpg}~\\[1cm]
-A URI gives a computer a specific point of reference for each item in the triple -- there is no need or interpretation or potential for misunderstanding.
-
-\url {http://computer.howstuffworks.com/semantic-web3.htm
-} 
+\textit{Fig.1} : Example of triple \footnote{\url {http://computer.howstuffworks.com/semantic-web3.htm
+}}
 \end{center}
+ A URI gives a computer a specific point of reference for each item in the triple (subject,property and object) -- there is no need or interpretation or potential for misunderstanding.
 
 \section{RDF}
 \paragraph{}
-RDF short for Resource Description Framework language is a cross-platform framework for describing resources on the web.
+RDF short for Resource Description Framework language is a  {\color{red}cross-platform framework} for describing resources on the web.It is written in XML and it's a W3C Recommendation.
+
+As we can see in Fig1. RDF format consists of triple relationship: a subject, a predicate(property), and an object. RDF is the foundation upon which the web semantic data is build.
 
 XML-based RDF allows a common way to describe and share information between different types of applications operating systems and computers.
-
-
-Slide presentation for this topic can be found on the following link : \url{https://docs.google.com/file/d/0BzZaPwl3dLnFeW0tZGV5bHdRNUU/edit?usp=docslist_api}
-
+ 
 
 \subsection{RDF Example}
-
+\paragraph{}
+The following example will give a more idea on how RDF works.\footnote{\url{
+http://www.w3schools.com/webservices/ws_rdf_example.asp}}
  
+ \paragraph{}
 Here are two records from a CD-list:
  
 \begin{center} 
@@ -129,7 +131,7 @@ Here are two records from a CD-list:
  \hline
 \end{tabular}
 \end{center}
-Source : \url{http://www.w3schools.com/webservices/ws_rdf_example.asp}
+
 \paragraph{}
 Below is a few lines from an RDF document:
 
@@ -174,9 +176,23 @@ The \textless rdf:Description\textgreater element contains the description of th
 
 The elements: \textbf{\textless cd:artist\textgreater}, \textbf{\textless cd:country\textgreater}, \textbf{\textless cd:company}\textgreater, etc. are properties of the resource.
 
+
+
+
+
+\section{References}
+\paragraph{}
+Slide presentation for this topic can be found on the following link : \url{https://docs.google.com/file/d/0BzZaPwl3dLnFeW0tZGV5bHdRNUU/edit?usp=docslist_api}
+
+\paragraph{}
+Resource information : 
+
+\url{http://www.w3.org/DesignIssues/RDF-XML.html}
+\url{http://www.w3schools.com/webservices/ws_rdf_rules.asp}
+\url{http://en.wikipedia.org/wiki/Resource_Description_Framework}
+\url{http://en.wikipedia.org/wiki/Semantic_Web}
+\url{https://www.youtube.com/watch?v=16q5bbeO3xI}
+
+
 \end{document}
-
-
-
-
 
