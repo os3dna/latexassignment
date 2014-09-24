@@ -4,3 +4,5 @@
 *.gz
 *.pdf
 *.toc
+*.lof
+*.lot
