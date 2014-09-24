@@ -65,7 +65,7 @@ showstringspaces=false}
 
 \large{Diana Rusu} \\
 \large{Alex Stavroulakis}\\
-\large{Nick Triantafylldis}\\[12cm]
+\large{Nick Triantafylldis}\\[11cm]
 
 \today
 \end{center}
@@ -78,8 +78,119 @@ showstringspaces=false}
 
 This is our report in latex.
 
-\chapter {Build Tools: Scons}
+\chapter{XML in the Semantic web : RDF}
 
+\section{Semantic Web}
+
+\paragraph{}Semantic Web is a framework for sharing data between applications, enterprises and people, independent of platform and software(W3C).
+
+Semantic refers to  {\color{red}meaning}. It is "a web of data that can be processed directly and indirectly by machines" - Tim Berners Lee
+
+Extends the internet which comprises web-pages readable only to humans, to websites that use metadata and can be read by machines.
+
+This leads to the creation of "smart" services that can perform tasks for users with better results and help them share and fin info more easier.
+
+Example : A human can utilize the web to search, find, compare and choose the lowest price to a product. Machines cannot since the webpages aren't build to be read by them.
+
+Semantic Web is a form of information that can be interpreted by machines so they can accomplish the tedious tasks that contain searching, putting together and editing what's already available online.
+
+\paragraph{}
+
+\begin{center}
+%\includegraphics[width=90mm]{images/semantic-web-3.jpg}~\\[1cm]
+\textit{Fig.1} : Example of triple \footnote{\url {http://computer.howstuffworks.com/semantic-web3.htm
+}}
+\end{center}
+ A URI gives a computer a specific point of reference for each item in the triple (subject,property and object) -- there is no need or interpretation or potential for misunderstanding.
+
+\section{RDF}
+\paragraph{}
+RDF short for Resource Description Framework language is a  {\color{red}cross-platform framework} for describing resources on the web.It is written in XML and it's a W3C Recommendation.
+
+As we can see in Fig1. RDF format consists of triple relationship: a subject, a predicate(property), and an object. RDF is the foundation upon which the web semantic data is build.
+
+XML-based RDF allows a common way to describe and share information between different types of applications operating systems and computers.
+ 
+
+\subsection{RDF Example}
+\paragraph{}
+The following example will give a more idea on how RDF works.\footnote{\url{
+http://www.w3schools.com/webservices/ws_rdf_example.asp}}
+ 
+ \paragraph{}
+Here are two records from a CD-list:
+ 
+\begin{center} 
+\begin{tabular}{ | l | c | c | c | c | c |}
+ \hline
+ Title & Artist & Country & Company & Price & Year \\ \hline
+ Empire Burlesque & Bob Dylan & USA &	Columbia & 10.90 &	1985 \\
+ \hline
+  Hide your heart & Bonnie Tyler & UK &	CBS Records &9.90 &	1988 \\
+ \hline
+\end{tabular}
+\end{center}
+
+\paragraph{}
+Below is a few lines from an RDF document:
+
+\begin{lstlisting}[language=XML]
+<?xml version="1.0"?>
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:cd="http://www.recshop.fake/cd#">
+
+<rdf:Description
+rdf:about="http://www.recshop.fake/cd/Empire Burlesque">
+  <cd:artist>Bob Dylan</cd:artist>
+  <cd:country>USA</cd:country>
+  <cd:company>Columbia</cd:company>
+  <cd:price>10.90</cd:price>
+  <cd:year>1985</cd:year>
+</rdf:Description>
+
+<rdf:Description
+rdf:about="http://www.recshop.fake/cd/Hide your heart">
+  <cd:artist>Bonnie Tyler</cd:artist>
+  <cd:country>UK</cd:country>
+  <cd:company>CBS Records</cd:company>
+  <cd:price>9.90</cd:price>
+  <cd:year>1988</cd:year>
+</rdf:Description>
+.
+.
+.
+</rdf:RDF> 
+
+
+\end{lstlisting}
+\paragraph{}
+The first line of the RDF document is the XML declaration. The XML declaration is followed by the root element of RDF documents: \textbf{\textless rdf:RDF\textgreater}.
+
+The xmlns:rdf namespace, specifies that elements with the rdf prefix are from the namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns\#".
+
+The xmlns:cd namespace, specifies that elements with the cd prefix are from the namespace "http://www.recshop.fake/cd\#".
+
+The \textless rdf:Description\textgreater element contains the description of the resource identified by the rdf:about attribute.
+
+The elements: \textbf{\textless cd:artist\textgreater}, \textbf{\textless cd:country\textgreater}, \textbf{\textless cd:company}\textgreater, etc. are properties of the resource.
+
+
+
+
+
+\section{References}
+\paragraph{}
+Slide presentation for this topic can be found on the following link : \url{https://docs.google.com/file/d/0BzZaPwl3dLnFeW0tZGV5bHdRNUU/edit?usp=docslist_api}
+
+\paragraph{}
+Resource information : 
+
+\url{http://www.w3.org/DesignIssues/RDF-XML.html}
+\url{http://www.w3schools.com/webservices/ws_rdf_rules.asp}
+\url{http://en.wikipedia.org/wiki/Resource_Description_Framework}
+\url{http://en.wikipedia.org/wiki/Semantic_Web}
+\url{https://www.youtube.com/watch?v=16q5bbeO3xI}
 
 \chapter{XQuery Definition}
 
@@ -89,14 +200,14 @@ This is our report in latex.
 \end{center}
 
 \paragraph{}
-\textbf{Xquery} is to XML formatted data what SQL is to
+\textbf{Xquery} {\footnotesize (1)} is to XML formatted data what SQL is to
 relational databases.\\
 
 \begin{itemize}
-  \item \textbf{Xquery} is a specification from \textit{W3C}, appeared in 2007 and became a \textit{W3C} reccomendation.
+  \item \textbf{Xquery} is a specification from \textit{W3C}, appeared in 2007 and became a \textit{W3C} {\footnotesize (2)} reccomendation.
   \item Current version 3.0.
   \item It is a language that uses queries to extract data from XML file or XML-like files.
-  \item It contains a superset of Xpath expression syntax.
+  \item It contains a superset of Xpath {\footnotesize (3)} expression syntax.
 \end{itemize}
  
  Also, \\
@@ -125,6 +236,11 @@ This presentation was a \emph{collaboration} between these groups: \\
  \end{tabular} 
 \end{center}
  
+\paragraph{References\\}
+1)http://en.wikipedia.org/wiki/XQuery \\
+2)http://www.w3.org/TR/xquery/ \\
+3)http://searchsoa.techtarget.com/definition/XPath \\
+
 
 \chapter{RegEx Text Directed Engine}
 
@@ -134,12 +250,12 @@ This presentation was a \emph{collaboration} between these groups: \\
 
 \section{Types of Engines}
 \begin{flushleft}
-Two basic engine types reflect a fundamental difference in algorithms available for applying a regular expression to a string. The \textbf{NFA} (Non Deterministic Finite Automations) "regex-directed" engines and the \textbf{DFA} (Deterministic Finite Automations) "text-directed" engines.
+Two basic engine types reflect a fundamental difference in algorithms available for applying a regular expression to a string. The \textbf{NFA}{\footnotesize (1)} (Non Deterministic Finite Automations) "regex-directed" engines and the \textbf{DFA}{\footnotesize (2)} (Deterministic Finite Automations) "text-directed" engines.
 \end{flushleft}
 
 \section{Text-directed Engines}
 \begin{center}
-According to Jeffrey E. F. Friedl’s book "Mastering Regular Expressions" a DFA engine, each character scanned from the text controls the engine.
+According to Jeffrey E. F. Friedl’s book {\footnotesize (3)} "Mastering Regular Expressions" a DFA engine, each character scanned from the text controls the engine.
 \end{center}
 
 \section{How does it Work}
@@ -170,9 +286,13 @@ This presentation was a \emph{collaboration} between these groups: \\
  \end{tabular} 
 \end{center}
 
+
+\paragraph{References\\}
+1) \href{http://en.wikipedia.org/wiki/Nondeterministic_finite_automaton}{NFA} \\
+2) \href{http://en.wikipedia.org/wiki/Deterministic_finite_automaton}{DFA} \\
+3) \href{http://dl.e-book-free.com/2013/07/mastering_regular_expressions_third_edition.pdf}{Book} \\
+
+\chapter {Build Tools: Scons}
+
 \end{document}
-
-
-
-
 
