@@ -90,33 +90,29 @@ This is our report for Latex assignment for the Essential Skills module. This re
 
 \section{Semantic Web}
 
-\paragraph{}Semantic Web is a framework for sharing data between applications, enterprises and people, independent of platform and software(W3C).
-
-Semantic refers to  {\color{red}meaning}. It is "a web of data that can be processed directly and indirectly by machines" - Tim Berners Lee
-
-Extends the internet which comprises web-pages readable only to humans, to websites that use metadata and can be read by machines.
-
-This leads to the creation of "smart" services that can perform tasks for users with better results and help them share and fin info more easier.
-
-Example : A human can utilize the web to search, find, compare and choose the lowest price to a product. Machines cannot since the webpages aren't build to be read by them.
-
-Semantic Web is a form of information that can be interpreted by machines so they can accomplish the tedious tasks that contain searching, putting together and editing what's already available online.
+\paragraph{}Semantic Web is a framework for sharing data between applications, enterprises and people, independent of platform and software(W3C).\\
+Semantic refers to  {\color{red}meaning}. It is "a web of data that can be processed directly and indirectly by machines" - Tim Berners Lee\\
+Extends the internet which comprises web-pages readable only to humans, to websites that use metadata and can be read by machines.\\
+This leads to the creation of "smart" services that can perform tasks for users with better results and help them share and fin info more easier.\\
+Example : A human can utilize the web to search, find, compare and choose the lowest price to a product. Machines cannot since the webpages aren't build to be read by them.\\
+Semantic Web is a form of information that can be interpreted by machines so they can accomplish the tedious tasks that contain searching, putting together and editing what's already available online. \\
 
 \paragraph{}
 
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=90mm]{images/semantic-web-3.jpg}~\\[1cm]
-		\caption {Example of triple \url {http://computer.howstuffworks.com/semantic-web3.htm}}
+		\caption {Example of triple \url {http://computer.howstuffworks.com/semantic-web3.htm}}\
+		\label{fig:semantic}
 \end{figure}
 
- A URI gives a computer a specific point of reference for each item in the triple (subject,property and object) -- there is no need or interpretation or potential for misunderstanding.
+A URI gives a computer a specific point of reference for each item in the triple (subject,property and object) -- there is no need or interpretation or potential for misunderstanding.\\
 
 \section{RDF}
 \paragraph{}
 RDF short for Resource Description Framework language is a  {\color{red}cross-platform framework} for describing resources on the web.It is written in XML and it's a W3C Recommendation.
 
-As we can see in Fig1. RDF format consists of triple relationship: a subject, a predicate(property), and an object. RDF is the foundation upon which the web semantic data is build.
+As we can see in  Figure~\ref{fig:semantic}  RDF format consists of triple relationship: a subject, a predicate(property), and an object. RDF is the foundation upon which the web semantic data is build.
 
 XML-based RDF allows a common way to describe and share information between different types of applications operating systems and computers.
  
@@ -138,6 +134,7 @@ Here are two records from a CD-list:
  \hline
 \end{tabular}
 \caption[A list of Albums]{A list of Albums}
+\label{tab:albums}
 \end{table}
 
 \paragraph{}
@@ -174,19 +171,17 @@ rdf:about="http://www.recshop.fake/cd/Hide your heart">
 
 \end{lstlisting}
 \paragraph{}
-The first line of the RDF document is the XML declaration. The XML declaration is followed by the root element of RDF documents: \textbf{\textless rdf:RDF\textgreater}.
-
-The xmlns:rdf namespace, specifies that elements with the rdf prefix are from the namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns\#".
-
-The xmlns:cd namespace, specifies that elements with the cd prefix are from the namespace "http://www.recshop.fake/cd\#".
-
-The \textless rdf:Description\textgreater element contains the description of the resource identified by the rdf:about attribute.
-
-The elements: \textbf{\textless cd:artist\textgreater}, \textbf{\textless cd:country\textgreater}, \textbf{\textless cd:company}\textgreater, etc. are properties of the resource.
+The first line of the RDF document is the XML declaration. The XML declaration is followed by the root element of RDF documents: \textbf{\textless rdf:RDF\textgreater}.\\
+The xmlns:rdf namespace, specifies that elements with the rdf prefix are from the namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns\#".\\
+The xmlns:cd namespace, specifies that elements with the cd prefix are from the namespace "http://www.recshop.fake/cd\#".\\
+The \textless rdf:Description\textgreater element contains the description of the resource identified by the rdf:about attribute.\\
+The elements: \textbf{\textless cd:artist\textgreater}, \textbf{\textless cd:country\textgreater}, \textbf{\textless cd:company}\textgreater, etc. are properties of the resource.\\
+See Table~\ref{tab:albums}
 
 \section{References}
 \paragraph{}
 Slide presentation for this topic can be found on the following link : \url{https://docs.google.com/file/d/0BzZaPwl3dLnFeW0tZGV5bHdRNUU/edit?usp=docslist_api} \cite{w3crdf,rdfrules,wikirdf,semantic,video1}
+
 
 \chapter{XQuery}
 
@@ -194,13 +189,14 @@ Slide presentation for this topic can be found on the following link : \url{http
 	\centering
 		\includegraphics{images/xquery_image.jpeg}~\\[1cm]
 		\caption {XQuery}
+		\label{fig:xquery}
 \end{figure}
 
 \section{Definiton}
 
 
 \paragraph{}
-\textbf{Xquery} is to XML formatted data what SQL is to relational databases. \cite{wikixquery}
+\textbf{Xquery} (see Figure~\ref{fig:xquery} ) is to XML formatted data what SQL is to relational databases. \cite{wikixquery}
 
 \begin{itemize}
   \item \textbf{Xquery} is a specification from \textit{W3C}, appeared in 2007 and became a \textit{W3C} reccomendation. \cite{w3xquery}
@@ -220,7 +216,7 @@ Slide presentation for this topic can be found on the following link : \url{http
 
 
 \paragraph{}
-This presentation was a \emph{collaboration} between these groups: \\
+This presentation was a \emph{collaboration} between these groups (see Table~\ref{tab:coltab1}): \\
  
 \begin{table}[h]
 \centering
@@ -235,9 +231,8 @@ This presentation was a \emph{collaboration} between these groups: \\
  \hline 
  \end{tabular} 
  \caption[Collaboration Table]{Collaboration Table}
+ \label{tab:coltab1}
 \end{table}
- 
-
 
 \chapter{RegEx Text Directed Engine}
 
@@ -245,6 +240,7 @@ This presentation was a \emph{collaboration} between these groups: \\
 	\centering
 		\includegraphics{images/regexp_logo.png}~\\[1cm]
 		\caption{Regular Expressions}
+		\label{fig:regex}
 \end{figure}
 
 \section{Types of Engines}
@@ -270,7 +266,7 @@ It walks through the input string attempting all permutations of the regular exp
 \end{itemize}
 
 \paragraph{}
-This presentation was a \emph{collaboration} between these groups: \\
+This presentation was a \emph{collaboration} between these groups (see Table~\ref{tab:coltab2}): \\
 
 \begin{table}[h]
 \centering
@@ -285,7 +281,13 @@ This presentation was a \emph{collaboration} between these groups: \\
  \hline 
  \end{tabular} 
  \caption[Collaboration Table]{Collaboration Table}
+ \label{tab:coltab2}
 \end{table}
+
+For a cool Regular Expression stamp see Figure~\ref{fig:regex}
+
+
+
 
 \chapter {Build Tools: Scons}
 
@@ -293,13 +295,14 @@ This presentation was a \emph{collaboration} between these groups: \\
 	\centering
 		\includegraphics{images/scons-logo-transparent.png}~\\[1cm]
 		\caption{Scons Build Tool}
+		\label{fig:scons}
 \end{figure}
 
 \section{What is SCons}
 
 \paragraph{}
 
-SCons is an open source software construction tool written in Python. It defines itself as a next-generation build tool and it is intended as a replacement of tools such as CMake and GNU autotools. 
+SCons (see logo Figure~\ref{fig:scons}) is an open source software construction tool written in Python. It defines itself as a next-generation build tool and it is intended as a replacement of tools such as CMake and GNU autotools. 
 
 \section{Why is SCons used}
 
@@ -361,7 +364,7 @@ Several major projects use SCons to build their software. Some of them include:
 
 \paragraph{}
 
-Below you can find a short comparison table between SCons and other popular build tools:
+Below you can find a short comparison table between SCons and other popular build tools (Table~\ref{tab:scons}):
 
 \begin{table}[h]
 \centering
@@ -376,6 +379,7 @@ Below you can find a short comparison table between SCons and other popular buil
  \hline 
  \end{tabular} 
  \caption[SCons VS. table]{SCons VS. table}
+ \label{tab:scons}
 \end{table}
 
 \begin{thebibliography}{99}
